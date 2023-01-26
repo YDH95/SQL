@@ -1,0 +1,20 @@
+CREATE TABLE mysql_test_a ( 
+num INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+id VARCHAR(30) NOT NULL, 
+pw VARCHAR(30) NOT NULL
+
+); 
+
+
+INSERT INTO `mysql_test_a` (`id`, `pw`) VALUES ('test1', 'test1234'); 
+INSERT INTO `mysql_test_a` (`id`, `pw`) VALUES ('test2', 'test123'); 
+INSERT INTO `mysql_test_a` (`id`, `pw`) VALUES ('test3', 'test12'); 
+INSERT INTO `mysql_test_a` (`id`, `pw`) VALUES ('test4', 'test1'); 
+
+SELECT pw = 'test1234'
+FROM mysql_test_a
+WHERE id = 'test1';
+
+로그인시 1리턴
+비밀번호 틀리면 0리턴
+둘다 존재하지않으면 빈값 리턴
