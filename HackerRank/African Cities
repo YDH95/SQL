@@ -1,0 +1,3 @@
+select a.name
+from city a, country b
+where b.CONTINENT = 'Africa' AND a.CountryCode = b.Code;
